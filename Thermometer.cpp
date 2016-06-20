@@ -1,5 +1,5 @@
 #include "Thermometer.h"
-
+#include "ThermoProbe.h"
 // Constructeur
 Thermometer::Thermometer() {
   nbrProbes = 0;
@@ -25,16 +25,15 @@ int Thermometer::countProbes() {
 
 
 void Thermometer::setPinConnection(int pins[NBR_INPUT_ANALOG_PINS]) {
-     /*
-   
-   int nbr = (sizeof(myInts)/sizeof(int));
+
+   int nbr = (sizeof(pins)/sizeof(int));
    
    int cnt = 0;
    int i = 0;
-   for (i = 0; i < (sizeof(myInts)/sizeof(int)); i++) {
-     if (myInts[i] != 0) {
-        cnt++; 
+   for (i = 0; i < (sizeof(pins)/sizeof(int)); i++) {
+     if (pins[i] != 0) {
+         thermosprobes[cnt] = new ThermoProbe();
+          cnt++;
      }
-     
-   }*/
+   }
 }
