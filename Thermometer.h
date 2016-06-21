@@ -27,7 +27,7 @@ class Thermometer
     byte value;
     Thermometer();
       
-   ThermoProbe *thermosprobes[NBR_INPUT_ANALOG_PINS];
+   ThermoProbe thermosprobes[NBR_INPUT_ANALOG_PINS];
        
     int countProbes();
     void updateBuffer();

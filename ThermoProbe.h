@@ -1,6 +1,6 @@
 /*
   ThermoProbe.h
-  Created by Artiom FEDOROV Mai 2012
+  Created by Artiom FEDOROV June 2016
   Released into the public domain.
 */
 
@@ -17,10 +17,16 @@ class ThermoProbe
   public:
     byte value;
     ThermoProbe();
-       
+    float code;
+    float celsius;
+    float fahrenheit;      
     void updateBuffer();
-    byte getValue() ;
-    
+    void init();
+    void setPin(int pin);
+    int getValue() ;
+
+  private:
+    int probePin;
 
 };
 
